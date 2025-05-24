@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= interviewType.charAt(0).toUpperCase() + interviewType.slice(1) %> Interview</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="title">
+        <h1><%= interviewType.charAt(0).toUpperCase() + interviewType.slice(1) %> Interview</h1>
+    </div>
+    <div class="box1">
+        <form action="/generate-question" method="POST">
+            <input type="hidden" name="interview_type" value="<%= interviewType %>">
+            <label for="job_role">Enter Job Role:</label>
+            <input type="text" name="job_role" required>
+            <button type="submit">Start Interview</button>
+        </form>
+        
+        <% if (question) { %>
+            <h2>Question:</h2>
+            <div class="para">
+                <p><%= question %></p>
+            </div>
+
+            <form action="/evaluate-answer" method="POST">
+                <input type="hidden" name="interview_type" value="<%= interviewType %>">
+                <input type="hidden" name="question" value="<%= question %>">
+                <label for="answer">Your Answer:</label>
+                <textarea name="answer" required></textarea>
+                <button type="submit">Submit Answer</button>
+            </form>
+        <% } %>
+
+        <% if (feedback) { %>
+            <h2>Feedback:</h2>
+            <div class="para">
+                <p><%= feedback %></p>
+            </div>
+
+            <% if (typeof answer !== 'undefined' && answer.trim() !== '') { %>
+            <form action="/generate-follow-up" method="POST">
+                <input type="hidden" name="interview_type" value="<%= interviewType %>">
+                <input type="hidden" name="question" value="<%= question %>">
+                <input type="hidden" name="answer" value="<%= answer %>">
+                <button type="submit">Generate Follow-Up Question</button>
+            </form>
+            <% } %>
+        <% } %>
+
+        <% if (followUp) { %>
+            <h2>Follow-Up Question:</h2>
+            <div class="para">
+                <p><%= followUp %></p>
+            </div>
+
+            <form action="/evaluate-answer" method="POST">
+                <input type="hidden" name="interview_type" value="<%= interviewType %>">
+                <input type="hidden" name="question" value="<%= followUp %>">
+                <label for="answer">Your Answer:</label>
+                <textarea name="answer" required></textarea>
+                <button type="submit">Submit Follow-Up Answer</button>
+            </form>
+        <% } %>
+    </div>
+</body>
+</html>

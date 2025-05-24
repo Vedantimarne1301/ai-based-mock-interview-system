@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Technical Interview</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="title">
+    <h1>Technical Interview</h1>
+    </div>
+    <div class="box1">
+    <form action="/generate-question" method="POST">
+        <input type="hidden" name="interview_type" value="technical">
+        <label for="job_role">Enter Job Role:</label>
+        <input id="text" type="text" name="job_role" required>
+        <button type="submit">Start Interview</button>
+    </form>
+
+    <% if (question) { %>
+        <h2>Question:</h2>
+        <p><%= question %></p>
+
+        <form action="/evaluate-answer" method="POST">
+            <input type="hidden" name="interview_type" value="technical">
+            <input type="hidden" name="question" value="<%= question %>">
+            <label for="answer">Your Answer:</label>
+            <textarea name="answer" required></textarea>
+            <button type="submit">Submit Answer</button>
+        </form>
+    <% } %>
+    <% if (feedback) { %>
+        <h2>Feedback:</h2>
+        <p><%= feedback %></p>
+        <div class="feedback">
+        <% if (typeof answer !== 'undefined' && answer !== '') { %>
+        <form action="/generate-follow-up" method="POST">
+            <input type="hidden" name="interview_type" value="technical">
+            <input type="hidden" name="question" value="<%= question %>">
+            <input type="hidden" name="answer" value="<%= answer %>">
+            <button type="submit">Generate Follow-Up Question</button>
+        </form>
+        <% } %>
+    <% } %>
+        </div>
+</div>
+</body>
+</html>

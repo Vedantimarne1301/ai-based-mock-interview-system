@@ -1,0 +1,116 @@
+body{
+    background-color:#2A2438;
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    color:#F5CDAA ;
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.box{
+    margin-left: 160px;
+    width:1000px;
+    height: 300px;
+    background-color:#5C5470;
+    border-radius: 10px;
+}
+.font{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 35px;
+    color:#F5CDAA;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.font h1{
+    margin-left: 280px;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.font p{
+    margin-bottom:10px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#InterviewType{
+    margin:10px;
+    font-size: 20px;
+    background-color: #2A2438;
+    color:#F5CDAA;
+    cursor:pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width:980px;
+    height: 35px;
+}
+select:focus {
+    border: 1px solid #5D5B6A ;
+    box-shadow: 0 0 10px rgba(76, 122, 175, 0.5);
+}
+
+.box1{
+    display:flex;
+    display: block;
+    width:500px;
+    margin-left: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#F5CDAA;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    margin-left: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#F5CDAA;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+form{
+    width: 250px;
+    height: 250px;
+    font-size: 25px;
+}
+textarea{
+    height: 130px;
+    width: 500px;
+    font-size: 20px;
+    background-color:#F5CDAA;
+    border-radius: 5px;
+}
+button{
+    width:100px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    color:#F5CDAA;
+    background-color:#5D5B6A;
+    
+}
+h2{
+    margin-top: 0px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.para{
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 1000px;
+}
+
+#text{
+   width:200px;
+   height: 50px; 
+}
+button:hover{
+    background-color:darkgrey;
+    cursor: pointer;
+}
