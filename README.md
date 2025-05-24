@@ -26,22 +26,15 @@ An AI-powered mock interview platform designed to simulate real interview experi
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/ai-mock-interview.git
-cd ai-mock-interview
+git clone https://github.com/Vedantimarne1301/ai-based-mock-interview-system.git
 ```
 
-### 2. Set up Virtual Environment
+### 2. Install dependancies
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+npm
 ```
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Add OpenAI API Key
+### 4. Add Gemini API Key
 Create a `.env` file in the root directory:
 ```
 API_KEY= YOUR_API_KEY
@@ -53,8 +46,6 @@ python server/app.py
 nodemon index.js
 ```
 then visit localhost3000 on your browser
-
----
 
 ##  Future Enhancements
 
