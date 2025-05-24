@@ -19,8 +19,8 @@ genai.configure(api_key=api_key)
 try:
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content("Say hello in a creative way.")
-    print("✅ API key works!")
+    print("API key works!")
     print("Response:", response.text)
 except Exception as e:
-    print("❌ API key test failed.")
+    print(" API key test failed.")
     print("Error:", e)
